@@ -1,0 +1,41 @@
+@import '../styles/variables.css';
+
+.titleContacts {
+    color: var(--title);
+    font-size: var(--size-title);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.smallHeadlines {
+  font-size: var(--size-subtitle);
+   /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    order: 1
+}
+
+.textContacts {
+    margin-inline: 150px;
+    margin-block-end: 40px;
+}
+
+.dataContacts {
+     /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    order: 2;
+}
+
+.section {
+    /* display: flex;
+    flex-direction: row; */
+    display: grid;
+    /* grid-column: 3;
+    grid-row: 2; */
+    grid-template-columns: 25% 25% 25%;
+    column-gap: 90px;
+    margin-inline: 150px;
+
+}

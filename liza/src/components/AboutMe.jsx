@@ -135,7 +135,7 @@ const AboutMe = () => {
                     <div className="hobbiesGrid">
                         {/* Колонка 1: Спорт */}
                         <div className={`hobbyCard ${openCards[1] ? 'open' : ''}`}>
-                            <h4 className="hobbyCardTitle">Спорт и здоровье</h4>
+                            <h4 className="smallHeadlines">Спорт и здоровье</h4>
 
                             {/*Показ картинки в зависимости от состояния*/}
                             {!openCards[1] ? (
@@ -174,7 +174,7 @@ const AboutMe = () => {
                         
                         {/* Колонка 2: Чтение */}
                         <div className={`hobbyCard ${openCards[2] ? 'open' : ''}`}>
-                            <h4 className="hobbyCardTitle">Чтение и саморазвитие</h4>
+                            <h4 className="smallHeadlines">Чтение и саморазвитие</h4>
 
                              {/*Показ картинки в зависимости от состояния*/}
                              {!openCards[2] ? (
@@ -213,7 +213,7 @@ const AboutMe = () => {
                         
                         {/* Колонка 3: Природа */}
                         <div className={`hobbyCard ${openCards[3] ? 'open' : ''}`}>
-                            <h4 className="hobbyCardTitle">Природа и путешествия</h4>
+                            <h4 className="smallHeadlines">Природа и путешествия</h4>
 
                             {/*Показ картинки в зависимости от состояния*/}
                              {!openCards[3] ? (

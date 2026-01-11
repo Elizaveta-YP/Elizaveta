@@ -1,4 +1,5 @@
 @import "../styles/variables.css";
+/* @import "../styles/index.css"; */
 .titleAboutMe {
   color: var(--title);
   display: flex;
@@ -52,7 +53,7 @@
   width: 100%;
 }
 
-.hobbyCardTitle {
+.smallHeadlines {
   font-size: var(--size-subtitle);
 }
 
@@ -65,6 +66,10 @@
   border-block-end: 5px solid;
   border-image: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4) 1;
   /* чтобы контент не прижимался к рамке */
+}
+
+.smallHeadlines {
+  font-size: var(--size-subtitle);
 }
 
 /* СЕТКА ДЛЯ ХОББИ */
