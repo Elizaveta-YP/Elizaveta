@@ -1,174 +1,190 @@
-/* Portfolio.css - полный рабочий вариант */
-
-/*редакция отображения */
 .portfolio {
-    padding: 40px 20px;
-    max-width: 400px;
-    max-height: 400px;
-    margin: 0 auto;
-     max-width: 60vh;
-    max-height: 40vh;
+  padding: 50px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
 
+.portfolio h3 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
 
-     /* display: grid;
-  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr)); */
+.swiperContainerWrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
 .portfolioSwiper {
-     max-width: 60vh;
-    max-height: 40vh;
+  width: 100%;
+  height: 950px;
+  padding: 20px 0;
 }
 
-.works {
-    /* max-width: 400px;
-    max-height: 400px; */
-    display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-
-
-
-
-   /* width: 100%;
-  height: 100px; 
-  object-fit: cover; */
-
-
-
-   display: grid;
-  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
-
-
+.portfolioSwiper .customSlide {
+  width: 600px;
+  height: 75%;
+  transition: all 0.4s ease;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
 }
 
-  .projectImage {
-  max-width: 100%; /* 100% от родительского контейнера */
-  max-height: 100%; /* 80% от высоты родителя */
-  height: auto; /* сохраняет пропорции */
-  width: auto; /* сохраняет пропорции */
-  object-fit: contain; /* вписывает целиком */
-  }
-
-
-/*редакция отображения */
-
-
-.portfolio h3 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 15px;
+.portfolioSwiper .swiper-slide-active {
+  transform: scale(1.05);
+  z-index: 10;
+  filter: brightness(1);
 }
 
-.portfolio p {
-    text-align: center;
-    color: #666;
-    margin-bottom: 30px;
+.portfolioSwiper .swiper-slide-prev,
+.portfolioSwiper .swiper-slide-next {
+  filter: brightness(0.7);
+  opacity: 0.8;
+  transform: scale(0.9);
 }
 
-.portfolio-swiper {
-    width: 100%;
-    height: 500px; /* Начальная высота */
-    max-width: 900px;
-    margin: 0 auto;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+/* Стили для карточки */
+.projectSlide {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: white;
+  transition: transform 0.3s ease;
 }
 
-/* Уменьшаем высоту карусели */
-.portfolio-swiper {
-    height: 450px; /* Уменьшенная высота */
+.projectSlide:hover {
+  transform: translateY(-5px);
 }
 
-.project-slide {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+.projectImageContainer {
+  height: 28vw;
+  max-height: 300px;
+  min-height: 200px;
+  overflow: hidden;
 }
 
-/* Уменьшаем изображение */
-.project-image {
-    width: 100%;
-    height: 250px !important; /* Принудительно задаем высоту */
-    object-fit: cover;
-    object-position: center;
-    flex-shrink: 0;
+.projectImage {
+  padding-block-start: 5px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
-.project-info {
-    flex-grow: 1;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95));
-    color: white;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.projectSlide:hover .projectImage {
+  transform: scale(1.05);
 }
 
-.project-info h4 {
-    margin: 0 0 10px 0;
-    font-size: 1.3rem;
+.projectInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: white;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  height: 30vw;
 }
 
-.project-info p {
-    margin: 0;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    text-align: left;
+.projectHeader {
+  margin-bottom: 20px;
+  width: 100%;
 }
 
-/* Стили для навигации Swiper */
-.swiper-button-next,
-.swiper-button-prev {
-    color: white !important;
-    background: rgba(0, 0, 0, 0.6);
-    width: 40px !important;
-    height: 40px !important;
-    border-radius: 50%;
+.projectTitle {
+  margin: 0 0 12px 0;
+  font-size: 1.25rem;
+  color: #333;
+  text-align: left;
 }
 
-.swiper-button-next:after,
-.swiper-button-prev:after {
-    font-size: 1rem !important;
+.projectContent {
+  width: 100%;
 }
 
-.swiper-pagination-bullet {
-    background: white !important;
-    opacity: 0.5;
-    width: 10px;
-    height: 10px;
+.projectContent > div {
+  width: 100%;
 }
 
-.swiper-pagination-bullet-active {
-    opacity: 1 !important;
+.projectContent p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #666;
+  text-align: left;
+  margin: 0 0 10px 0;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
-    .portfolio-swiper {
-        height: 400px;
-    }
-    
-    .project-image {
-        height: 200px !important;
-    }
-    
-    .project-info {
-        padding: 15px;
-    }
-    
-    .project-info h4 {
-        font-size: 1.1rem;
-    }
-    
-    .project-info p {
-        font-size: 0.85rem;
-    }
+/* Стили для списков внутри контента */
+.blockPracticalSkills {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 8px 0;
+  padding-left: 20px;
+  width: 100%;
+} 
+
+.practicalSkills {
+  list-style: none;
+  margin-bottom: 4px ;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.projectButtons {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.cardButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  min-height: 44px; /* Для доступности */
+  height: auto;
 }
 
 
+/* Навигация Swiper */
+.portfolioSwiper .swiper-button-next,
+.portfolioSwiper .swiper-button-prev {
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  backdrop-filter: blur(5px);
+}
 
-
+.portfolioSwiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #999;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
 
 

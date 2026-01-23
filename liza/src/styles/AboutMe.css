@@ -55,6 +55,12 @@
 
 .smallHeadlines {
   font-size: var(--size-subtitle);
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  white-space: nowrap;
+  margin-block-end: 20px;
+
 }
 
 .hobbyDescription {
@@ -66,10 +72,6 @@
   border-block-end: 5px solid;
   border-image: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4) 1;
   /* чтобы контент не прижимался к рамке */
-}
-
-.smallHeadlines {
-  font-size: var(--size-subtitle);
 }
 
 /* СЕТКА ДЛЯ ХОББИ */
@@ -212,4 +214,3 @@
   align-content: space-between;
   height: 80%;
 }
-

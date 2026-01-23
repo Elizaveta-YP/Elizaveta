@@ -8,7 +8,7 @@
     justify-content: center;
 }
 
-.smallHeadlines {
+.smallHeadlinesContact {
   font-size: var(--size-subtitle);
    /* display: flex;
     align-items: center;
@@ -18,7 +18,7 @@
 
 .textContacts {
     margin-inline: 150px;
-    margin-block-end: 40px;
+    margin-block: 40px;
 }
 
 .dataContacts {
@@ -36,6 +36,39 @@
     grid-row: 2; */
     grid-template-columns: 25% 25% 25%;
     column-gap: 90px;
+    row-gap:15px;
     margin-inline: 150px;
+}
 
+.copyNotification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block-start: 30px;
+}
+
+.copyLink {
+    text-decoration: none;
+    color: black;
+}
+
+.city {
+    border: none;
+    background-color: white;
+    font-size: var(--size-text);
+}
+
+.mapModalContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-block-start: 20px;
+}
+
+.mapCloseBtn {
+    width: 30px;
+    height: 400px;
+    border: none;
+    background-color: white;
 }

@@ -21,12 +21,12 @@
         25% 95%,
         10% 90%,
         0% 85% */
-      0% 0%,
+    0% 0%,
     /* верхний левый */ 100% 0%,
     /* верхний правый */ 100% 75%,
 
     /* правый верхний угол восьмиугольника */
-      /* Восьмиугольная нижняя часть (8 сторон) */ 100% 85%,
+    /* Восьмиугольная нижняя часть (8 сторон) */ 100% 85%,
     /* ↘ правый верхний скос */ 85% 100%,
     /* ↓ правая вертикальная сторона */ 50% 100%,
     /* ← нижняя горизонтальная сторона (центр) */ 15% 100%,
@@ -37,7 +37,26 @@
 
 .header {
   border-bottom: var(--highlight);
-   /* padding: 15px 20px;
+  /* padding: 15px 20px;
     transition: color 0.3s ease; */
-    background: linear-gradient(90deg, #FAE8E7, #FACCF1);
+  background: linear-gradient(90deg, #fae8e7, #faccf1);
+}
+
+/* .container {
+width: 40vw;
+} */
+
+.headers {
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color:linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4) 1; */
+}
+
+.navItems {
+  margin-inline-end: 35px;
 }

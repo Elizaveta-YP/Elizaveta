@@ -32,6 +32,7 @@
   cursor: pointer;
   font-size: 1.1rem;
   text-align: left;
+  position: relative;
   /* transition: background-color 0.3s ease; */
   /* transition: all 5s cubic-bezier(4, 0, 2, 1);  */
 }
@@ -43,7 +44,7 @@
 .accordionSection.expanded .accordionHeader {
   background-color: #f0f7ff;
   border-bottom: 1px solid #e0e0e0;
-    justify-content: center; /* Центрируем */
+
   /* padding-left: 60px; Компенсируем место для иконки */
   padding-right: 60px;
 }

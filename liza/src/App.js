@@ -1,35 +1,6 @@
-// import './App.css';
-// import './styles/reset.css'
-// import './styles/index.css';
-// import './styles/Header.css';
-// import './styles/AboutMe.css';
-// import Header from './components/Header';
-// import AboutMe from './components/AboutMe';
-// import Skills from './components/Skills';
-// import Footer from './components/Footer';
-// import Portfolio from './components/Portfolio';
-// import Contacts from './components/Contacts';
-
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <Header />
-//       <AboutMe />
-//       <Skills />
-//       <Portfolio />
-//       <Contacts />
-//       <Footer />
-//     </div>
-
-//   );
-// }
-
-// export default App;
-
-
 import { useState } from 'react';
-import './styles/reset.css'
+import './styles/reset.css';
+import './styles/variables.css';
 import './styles/index.css';
 import './styles/Header.css';
 import './styles/AboutMe.css';
@@ -45,9 +16,9 @@ import Contacts from './components/Contacts';
 
 function App() {
   const [expandedSections, setExpandedSections] = useState({
-    about: false,    // Начально открыта "Обо мне"
+    about: false,   
     skills: false,
-    project: true,
+    project: false,
     contact: false
   });
 
