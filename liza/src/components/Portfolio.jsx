@@ -8,21 +8,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 
 import '../styles/Portfolio.css';
-// import '../styles/AboutMe.css';
-
-
-import layout_desktop_do_you_need_it from '../images/Layouts/layout_desktop_do_you_need_it.jpg';
-import layout_desktop_look_out_the_window_1 from '../images/Layouts/layout_desktop_look_out_the_window_1.jpg';
-import layout_desktop_look_out_the_window_2 from '../images/Layouts/layout_desktop_look_out_the_window_2.jpg';
-import layout_desktop_no_focus from '../images/Layouts/layout_desktop_no_focus.jpg';
-import layout_mobile_no_focus from '../images/Layouts/layout_mobile_no_focus.jpg';
-import layout_desktop_closing_tag from '../images/Layouts/layout_desktop_closing_tag.jpg';
-import layout_mobile_closing_tag from '../images/Layouts/layout_mobile_closing_tag.jpg';
-import layout_desktop_website from '../images/Layouts/layout_desktop_website.jpg';
-import layout_desktop_website_1 from '../images/Layouts/layout_desktop_website_1.jpg';
-import layout_desktop_website_2 from '../images/Layouts/layout_desktop_website_2.jpg';
-import layout_desktop_website_3 from '../images/Layouts/layout_desktop_website_3.jpg';
-import layout_desktop_website_4 from '../images/Layouts/layout_desktop_website_4.jpg';
 
 import do_you_need_it from '../images/do_you_need_it.jpg';
 import look_out_the_window from '../images/look_out_the_window.jpg';

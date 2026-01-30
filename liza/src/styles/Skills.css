@@ -143,12 +143,6 @@
     background-clip: text;
 }
 
-/* Заголовок */
-/* .skillsHeader {
-    text-align: center;
-    margin-bottom: 40px;
-} */
-
 .skillsTitle {
     font-size: 2.5rem;
     background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
@@ -223,4 +217,34 @@
 
 .skillsSection {
     background-color: white;;
+}
+
+
+
+@media (max-width: 768px) {
+.skillsContent {
+    max-width: 100%;
+}
+}
+
+@media (max-width: 480px) {
+    .skillName {
+        font-size: 16px;
+    }
+}
+
+
+@media (min-width: 361px) and (max-width: 429px) {
+.skillsTabs {
+    gap: 50px;
+    /* align-items: baseline; */
+}
+
+.skillsTab {
+      width: 30%;
+}
+
+.skillName {
+    font-size: 12px;
+}
 }

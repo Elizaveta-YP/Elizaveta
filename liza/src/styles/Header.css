@@ -95,6 +95,174 @@
 }
 
 
+@media (max-width: 756px) {
+  .navItems {
+    margin-inline: 10px;
+  }
+}
 
-/*проба*/
+@media (max-width: 480px) {
+  .logo {
+    font-size: calc(var(--size-title) * 0.7); /* Уменьшаем размер шрифта */
+    padding-block: 20px; /* Уменьшаем отступы */
+    margin-bottom: -15px; /* Поднимаем ближе к навигации */
+    
+    /* Упрощаем форму для мобильных */
+    clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      100% 80%,
+      50% 95%,
+      0% 80%
+    );
+  }
+
+  .headers {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(88, 185, 176, 0.4); /* Немного насыщеннее */
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 15px 15px; /* Меньшее скругление */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px 0;
+  }
+
+  .nav {
+    margin-block: 10px; /* Уменьшаем отступы */
+    position: sticky;
+    top: 60px; /* Меньший отступ от верха */
+    z-index: 999;
+    padding: 5px 0;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .navList {
+    
+    border-radius: 15px;
+    padding: 3px 8px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Горизонтальная прокрутка если не помещается */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Скрываем скроллбар Firefox */
+  }
+
+  .navList::-webkit-scrollbar {
+    display: none; /* Скрываем скроллбар Chrome/Safari */
+  }
+
+  .navItems {
+    margin-inline: 8px; /* Уменьшаем отступы между пунктами */
+    margin-block: 5px;
+    font-size: calc(var(--size-subtitle) * 0.8); /* Уменьшаем размер шрифта */
+    white-space: nowrap; /* Запрещаем перенос текста */
+    flex-shrink: 0; /* Не сжимаем элементы */
+  }
+
+  .navLink {
+    color: white;
+    padding: 6px 12px; /* Увеличиваем область клика */
+    display: block;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    font-weight: 500;
+  }
+
+  .navLink:hover,
+  .navLink:active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #FCEBEB;
+  }
+
+  
+
+
+
+   .logo {
+    font-size: calc(var(--size-title) * 0.7);
+    padding-block: 20px;
+    margin-bottom: -15px;
+    clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      100% 80%,
+      50% 95%,
+      0% 80%
+    );
+  }
+
+  .headers {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(88, 185, 176, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px 0;
+  }
+
+  .nav {
+    
+    position: relative; /* Меняем sticky на relative */
+    top: auto; /* Сбрасываем sticky позиционирование */
+    z-index: 999;
+    padding: 5px 0;
+    width: 100%;
+    max-width: 280px; /* Ограничиваем ширину */
+    margin-left: auto;
+    margin-right: auto;
+    margin-block: 0;
+   
+  }
+
+  /* Делаем навигацию вертикальной */
+  .navList {
+    
+    border-radius: 15px;
+    padding: 10px 0; /* Внутренние отступы сверху и снизу */
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение */
+    align-items: stretch; /* Растягиваем на всю ширину */
+    overflow: visible; /* Убираем горизонтальную прокрутку */
+    width: 100%;
+  }
+
+  .navItems {
+    margin: 0; /* Убираем горизонтальные отступы */
+    margin-bottom: 5px; /* Добавляем вертикальные отступы */
+    font-size: calc(var(--size-subtitle) * 0.8);
+    white-space: normal; /* Разрешаем перенос текста */
+    text-align: center; /* Центрируем текст */
+    width: 100%;
+    max-height: 22px;
+  }
+
+  /* Последний элемент без отступа снизу */
+  .navItems:last-child {
+    margin-bottom: 0;
+  }
+
+  .navLink {
+    color: white;
+    padding: 12px 20px; /* Увеличиваем отступы для удобства касания */
+    display: block;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .navLink:hover,
+  .navLink:active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #FCEBEB;
+  }
+}
+
 

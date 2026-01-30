@@ -72,19 +72,24 @@
   /* чтобы контент не прижимался к рамке */
 }
 
-/* СЕТКА ДЛЯ ХОББИ */
 .hobbiesContainer {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px 0;
+  height: 500px; /* ФИКСИРОВАННАЯ высота контейнера */
+  min-height: 500px; /* Минимальная высота */
+  overflow-y: auto; /* Прокрутка внутри контейнера если нужно */
+  scrollbar-width: none;
 }
 
+/* Десктоп - 3 колонки */
 .hobbiesGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Три равные колонки */
-  gap: 30px; /* Расстояние между карточками */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
   width: 100%;
+  height: 100%; /* Занимает всю высоту контейнера */
 }
 
 /* КАРТОЧКА ХОББИ */
@@ -205,4 +210,131 @@
 }
 
 @media (max-width: 768px) {
+  .titleAboutMe {
+    font-size: calc(var(--size-title) * 0.8);
+    margin: 25px 15px;
+  }
+  
+  .profilePhoto {
+    min-height: 400px;
+    min-width: 250px;
+    border-width: 5px; /* Уменьшаем толщину рамки */
+  }
+
+  .sectionGrid {
+    grid-template-columns: 1fr; /* Одна колонка на мобильных */
+    gap: 15px;
+    max-width: 400px; /* Ограничиваем ширину */
+    margin: 0 auto;
+  }
+  
+  /* Сетка хобби - одна колонка */
+  .hobbiesGrid {
+    grid-template-columns: 1fr; /* Одна колонка на мобильных */
+    gap: 15px;
+    max-width: 400px; /* Ограничиваем ширину */
+    margin: 0 auto;
+  }
+  
+  .hobbyCard {
+    min-height: 320px;
+    padding: 15px;
+  }
+  
+  .screensaver {
+    height: 220px;
+  }
+  
+  .hobbyDescription {
+    font-size: calc(var(--size-text) * 0.9);
+    padding: 0 10px;
+  }
+  
+  .cardTextContainer {
+    padding: 15px 0;
+  }
+  
+  /* Кнопки */
+  .sectionButtons {
+    font-size: calc(var(--size-button) * 0.9);
+  }
+  
+  .expandButton,
+  .collapseButton {
+    min-height: 35px;
+    padding: 8px 16px;
+  }
+  
+  /* Текстовые блоки */
+  .textSection {
+    padding: 0 15px;
+  }
+  
+  .textSection p {
+    font-size: calc(var(--size-text) * 0.9);
+    margin-bottom: 15px;
+  }
+  
+  .acquaintance {
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+}
+
+
+@media (min-width: 361px) and (max-width: 429px) {
+  .hobbiesGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  /* Закрытая карточка - компактная */
+  .hobbyCard {
+    min-height: 280px; /* Меньшая высота когда закрыто */
+    max-height: 280px;
+    padding: 15px;
+    border-width: 4px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+
+  /* Открытая карточка - больше места */
+  .hobbyCard.open {
+    min-height: 420px; /* Больше когда открыто */
+    max-height: none; /* Снимаем ограничение */
+  }
+
+  .cardImageContainer {
+    min-height: 150px;
+    height: 150px;
+  }
+
+  .cardOpenedContainer {
+    min-height: 200px;
+    height: auto;
+  }
+
+  .screensaver {
+    height: 150px;
+    max-height: 150px;
+  }
+
+  .expandButton,
+  .collapseButton {
+    width: 100%;
+    max-width: 280px;
+    min-height: 36px;
+    padding: 8px 15px;
+    margin: 10px auto 0;
+  }
+
+  .smallHeadlines {
+    font-size: 16px;
+  }
 }

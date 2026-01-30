@@ -421,3 +421,214 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+@media (max-width: 480px) {
+  .portfolio {
+    padding: 30px 10px;
+    max-height: none; /* Убираем фиксированную высоту */
+    margin: 0 auto;
+  }
+
+  .portfolio h3 {
+    font-size: calc(var(--size-title) * 0.8);
+    margin-bottom: 15px;
+  }
+
+  .swiperContainerWrapper {
+    padding: 0 5px;
+  }
+
+  .portfolioSwiper {
+    height: 650px; /* Уменьшаем высоту Swiper */
+    padding: 10px 0 40px 0; /* Больше padding снизу для пагинации */
+  }
+
+  /* Слайды на мобильных */
+  .portfolioSwiper .customSlide {
+    width: 320px !important; /* Фиксированная ширина на мобильных */
+    height: 550px; /* Уменьшаем высоту карточек */
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Активный слайд */
+  .portfolioSwiper .swiper-slide-active {
+    transform: scale(1.02); /* Меньшее увеличение на мобильных */
+  }
+
+  /* Соседние слайды */
+  .portfolioSwiper .swiper-slide-prev,
+  .portfolioSwiper .swiper-slide-next {
+    transform: scale(0.85);
+    opacity: 0.6;
+  }
+
+  /* Карточка проекта */
+  .projectSlide {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .projectImageContainer {
+    height: 180px; /* Фиксированная высота изображения */
+    max-height: 180px;
+    min-height: 180px;
+  }
+
+  .projectImage {
+    padding-block-start: 0;
+  }
+
+  .projectInfo {
+    padding: 15px;
+    max-height: none; /* Убираем ограничение высоты */
+    flex: 1;
+  }
+
+  .projectHeader {
+    margin-bottom: 15px;
+  }
+
+  .projectTitle {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    text-align: center; /* Центрируем заголовок на мобильных */
+  }
+
+  .projectContent {
+    overflow-y: auto; /* Добавляем прокрутку если контент не помещается */
+    max-height: 180px; /* Ограничиваем высоту контента */
+  }
+
+  .projectContent p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    text-align: center; /* Центрируем текст на мобильных */
+  }
+
+  /* Списки навыков */
+  .blockPracticalSkills {
+    padding-left: 15px;
+    margin: 5px 0;
+    text-align: left; /* Списки оставляем слева */
+  }
+
+  .practicalSkills {
+    font-size: 0.8rem;
+    margin-bottom: 3px;
+    line-height: 1.3;
+  }
+
+  /* Кнопки */
+  .projectButtons {
+    gap: 8px;
+    margin-top: 15px;
+  }
+
+  .cardButtons {
+    padding: 10px 15px;
+    font-size: 0.85rem;
+    min-height: 42px; /* Оптимальная высота для касания */
+    border-radius: 6px;
+  }
+
+  /* Навигация Swiper на мобильных */
+ 
+
+  /* Пагинация на мобильных */
+  .portfolioSwiper .swiper-pagination {
+    bottom: 10px !important; /* Поднимаем пагинацию выше */
+  }
+
+  .portfolioSwiper .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    margin: 0 4px !important;
+  }
+
+  .portfolioSwiper .swiper-pagination-bullet-active {
+    width: 20px;
+    border-radius: 4px;
+  }
+
+    .portfolioSwiper .swiper-button-next,
+  .portfolioSwiper .swiper-button-prev {
+    display: block !important;
+    width: 25px !important; /* Уменьшаем размер */
+    height: 25px !important;
+    border-radius: 50%;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    top: 50% !important;
+    transform: translateY(-50%);
+    margin-top: 0;
+    opacity: 0.9;
+  }
+
+  .portfolioSwiper .swiper-button-next {
+    right: 3px !important; /* Ближе к краю */
+  }
+
+  .portfolioSwiper .swiper-button-prev {
+    left: 3px !important;
+  }
+
+  /* Иконки стрелок */
+  .portfolioSwiper .swiper-button-next:after,
+  .portfolioSwiper .swiper-button-prev:after {
+    font-size: 14px !important; /* Уменьшаем иконки */
+    color: white !important;
+    font-weight: bold;
+  }
+
+  /* Эффекты при нажатии */
+  .portfolioSwiper .swiper-button-next:active,
+  .portfolioSwiper .swiper-button-prev:active {
+    transform: translateY(-50%) scale(0.9);
+    background: rgba(88, 185, 176, 1) !important;
+  }
+}
+/* 
+  @media (min-width: 361px) and (max-width: 429px) {
+  /* Стрелки навигации Swiper *
+  .portfolioSwiper .swiper-button-next,
+  .portfolioSwiper .swiper-button-prev {
+    display: block !important;
+    width: 25px !important; /* Уменьшаем размер 
+    height: 25px !important;
+    border-radius: 50%;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    top: 50% !important;
+    transform: translateY(-50%);
+    margin-top: 0;
+    opacity: 0.9;
+  }
+
+  .portfolioSwiper .swiper-button-next {
+    right: 3px !important; /* Ближе к краю 
+  }
+
+  .portfolioSwiper .swiper-button-prev {
+    left: 3px !important;
+  }
+
+  /* Иконки стрелок 
+  .portfolioSwiper .swiper-button-next:after,
+  .portfolioSwiper .swiper-button-prev:after {
+    font-size: 14px !important; /* Уменьшаем иконки 
+    color: white !important;
+    font-weight: bold;
+  }
+
+  /* Эффекты при нажатии 
+  .portfolioSwiper .swiper-button-next:active,
+  .portfolioSwiper .swiper-button-prev:active {
+    transform: translateY(-50%) scale(0.9);
+    background: rgba(88, 185, 176, 1) !important;
+  }
+}
+   */
