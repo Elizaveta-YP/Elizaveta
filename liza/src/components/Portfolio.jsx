@@ -16,6 +16,9 @@ import closing_tag from '../images/closing_tag.jpg';
 import smart_table from '../images/smart_table.jpg';
 import website from '../images/website.jpg';
 
+
+import Confetti from '../components/Confetti';
+
 const Portfolio = () => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
@@ -36,13 +39,13 @@ const Portfolio = () => {
             title: 'Проект «Оно тебе надо»', 
              content: ( 
                 <div>
-                <p>В этом проекте я практиковала:
+                <p>В этом проекте я практиковала:</p>
                     <ul className="blockPracticalSkills">
                         <li className="practicalSkills">Полный цикл верстки</li>
                         <li className="practicalSkills">Работу с современными CSS-технологиями</li>
                         <li className="practicalSkills">Семантическую верстку и организацию кода</li>
                     </ul>
-                </p>
+                {/* </p> */}
                 </div>
              ),
             image: do_you_need_it, 
@@ -55,12 +58,11 @@ const Portfolio = () => {
             title: 'Проект «Посмотри в окно»',
             content: ( 
                 <div>
-                <p>В этом проекте я практиковала:
+                <p>В этом проекте я практиковала:</p>
                     <ul className="blockPracticalSkills">
                         <li className="practicalSkills">Стилизацию форм и их состояний</li>
                         <li className="practicalSkills">Точную pixel-perfect верстку по макету</li>
                     </ul>
-                </p>
                 </div>
              ),
             image: look_out_the_window,
@@ -73,13 +75,12 @@ const Portfolio = () => {
             title: 'Проект «Нет фокуса»',
              content: ( 
                 <div>
-                <p>В этом проекте я практиковала:
+                <p>В этом проекте я практиковала:</p>
                     <ul className="blockPracticalSkills">
                         <li className="practicalSkills">Работу с адаптивной версткой</li>
                         <li className="practicalSkills">Mobile First подход</li>
                         <li className="practicalSkills">Реализацию темной и светлой темы с системным переключением</li>
                     </ul>
-                </p>
                 </div>
              ),
             image: no_focus,
@@ -92,14 +93,13 @@ const Portfolio = () => {
             title: 'Проект «Закрывающий тег»',
             content: ( 
                 <div>
-                <p>В этом проекте я практиковала:
+                <p>В этом проекте я практиковала:</p>
                     <ul className="blockPracticalSkills">
                         <li className="practicalSkills">CSS анимации</li>
                         <li className="practicalSkills">Работу с диалоговыми окнами</li>
                         <li className="practicalSkills">Резиновую верстку</li>
                         <li className="practicalSkills">Оптимизацию графики</li>
                     </ul>
-                </p>
                 </div>
              ),
             image: closing_tag,
@@ -112,13 +112,12 @@ const Portfolio = () => {
             title: 'Проект «Умная таблица»',
             content: ( 
                 <div>
-                <p>В этом проекте я практиковала:
+                <p>В этом проекте я практиковала:</p>
                     <ul className="blockPracticalSkills">
                         <li className="practicalSkills">Создание и работу в модульной архитектуре</li>
                         <li className="practicalSkills">Разработку алгоритмов обработки данных</li>
                         <li className="practicalSkills">Работу с формами (сбор данных, фильтры, сортировка, текущая страница)</li>
                     </ul>
-                </p>
                 </div>
              ), 
             image: smart_table,
@@ -130,14 +129,13 @@ const Portfolio = () => {
             title: 'Проект «Веб-сайт»',
             content: ( 
                 <div>
-                <p>В этом проекте я практиковала:
+                <p>В этом проекте я практиковала:</p>
                     <ul className="blockPracticalSkills">
                         <li className="practicalSkills">Проектирование архитектуры приложения</li>
                         <li className="practicalSkills">Типизацию в TypeScript</li>
                         <li className="practicalSkills">Создание интерфейсов для сущностей</li>
                         <li className="practicalSkills">Работу с API</li>
                     </ul>
-                </p>
                 </div>
              ),
             image: website,
@@ -148,7 +146,9 @@ const Portfolio = () => {
     ];
 
     return (
-        <div className="portfolio">
+        <div className="portfolio" style={{ position: 'relative', overflow: 'hidden' }}>
+            {/* Добавляем конфетти на фон */}
+            <Confetti />
             <h3 className="titlePortfolio">Портфолио</h3>
             
             <div className="swiperContainerWrapper">

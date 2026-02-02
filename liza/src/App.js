@@ -16,11 +16,17 @@ import Footer from './components/Footer';
 import Portfolio from './components/Portfolio';
 import Contacts from './components/Contacts';
 
+
+
+
+
+
+
 function App() {
   const [expandedSections, setExpandedSections] = useState({
-    about: true,   
-    skills: true,
-    project: true,
+    about: false,   
+    skills: false,
+    project: false,
     contact: true
   });
 
@@ -178,6 +184,7 @@ function App() {
 
   return (
     <div className="App">
+
       <Header onNavClick={handleSectionClick} />
       
       <div className="main-content">

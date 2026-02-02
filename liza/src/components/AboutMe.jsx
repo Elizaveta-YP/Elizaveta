@@ -4,6 +4,9 @@ import reading from '../images/reading.jpg';
 import sport from '../images/sport.jpg';
 import travel from '../images/travel.jpg';
 
+
+import Stars from '../components/Stars';
+
 const AboutMe = () => {
     //Состояние для отслеживания открытых карточек
     const [openCards, setOpenCards] = useState({});
@@ -131,7 +134,7 @@ const AboutMe = () => {
                                     <div className="cardOpenedContainer">
                                         <div className="cardTextContainer">
                                           <p className="hobbyDescription">
-                                             Изучаю книги по программированию. Люблю классические произведения и книги по саморазвитию.  
+                                             Изучаю книги по программированию. Люблю читать классические произведения и книги по саморазвитию.  
                                           </p>
                                         </div>
                                          <button
@@ -189,18 +192,25 @@ const AboutMe = () => {
         }
     ]
 
-    return (
-        <div className="">
-            <div className="aboutMeContent">                  
-                {sectionsData.map(section => (
-                    <div key={section.id}>
-                        <h3 className="titleAboutMe">{section.title}</h3>
-                        {section.content}
-                    </div>
-                ))}
-            </div>
-        </div>
-    )
+   return (
+    <div className="one">
+         <Stars />
+    
+  <div className="about-me-container" style={{ position: 'relative' }}>
+    {/* <Stars /> */}
+    <div className="about-me-wrapper">
+      <div className="aboutMeContent">  
+        {sectionsData.map(section => (
+          <div key={section.id}>
+            <h3 className="titleAboutMe">{section.title}</h3>
+            {section.content}
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+  </div>
+);
 }
 
 export default AboutMe;

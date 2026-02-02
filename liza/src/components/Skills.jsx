@@ -323,6 +323,8 @@ import creativeThinking from '../images/creativeThinking.png';
 import selfOrganization from '../images/selfOrganization.png';
 import responsibility from '../images/responsibility.png';
 
+import Snowflakes from '../components/Snowflakes';
+
 const Skills = () => {
     const [activeTab, setActiveTab] = useState('hard');
     const [isInitialLoad, setIsInitialLoad] = useState(true);
@@ -378,7 +380,9 @@ const Skills = () => {
     const currentTab = skillsData[activeTab];
 
     return (
-        <div className="skillsSection">
+        <div className="skillsSection" style={{ position: 'relative', overflow: 'hidden' }}>
+      {/* Добавляем снежинки на фон */}
+      <Snowflakes />
             <h3 className="titleSkills">Навыки и умения</h3>
             
             {/* Основные вкладки Hard/Soft Skills */}

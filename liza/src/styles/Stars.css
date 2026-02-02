@@ -1,0 +1,235 @@
+/* Stars.css */
+.golden-stars-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    white
+  );
+}
+
+.space-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(255, 215, 0, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 200, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(255, 255, 150, 0.02) 0%, transparent 50%);
+}
+
+/* Общие стили для звезд */
+.star {
+  position: absolute;
+  border-radius: 50%;
+  transform-origin: center;
+  animation-fill-mode: both;
+}
+
+/* Типы звезд */
+.star-type-0 {
+  background: radial-gradient(circle, #FFD700 30%, #FFA500 70%);
+  box-shadow: 
+    0 0 10px #FFD700,
+    0 0 20px rgba(255, 215, 0, 0.5),
+    0 0 30px rgba(255, 215, 0, 0.3);
+}
+
+.star-type-1 {
+  background: radial-gradient(circle, #FFF 20%, #FFD700 40%, transparent 70%);
+  box-shadow: 
+    0 0 15px #FFD700,
+    0 0 25px rgba(255, 215, 0, 0.6),
+    0 0 35px rgba(255, 215, 0, 0.2);
+}
+
+.star-type-2 {
+  background: radial-gradient(circle, #FFFF00 10%, #FFA500 30%, transparent 60%);
+  box-shadow: 
+    0 0 20px #FFD700,
+    inset 0 0 10px #FFF;
+}
+
+/* Большие звезды */
+.big-star {
+  position: absolute;
+  color: #FFD700;
+  text-shadow: 
+    0 0 10px #FFD700,
+    0 0 20px rgba(255, 215, 0, 0.8),
+    0 0 30px rgba(255, 215, 0, 0.4);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 0 5px #FFD700);
+  animation-fill-mode: both;
+}
+
+/* ОСНОВНАЯ АНИМАЦИЯ ПАДЕНИЯ ЗВЕЗД */
+@keyframes fall {
+  0% {
+    opacity: 0;
+    transform: translateY(0) rotate(0deg) scale(1);
+    top: var(--start-top, -50px);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100vh) rotate(360deg) scale(0.8);
+    top: var(--end-top, calc(100vh + 50px));
+  }
+}
+
+/* Анимация падения с вращением */
+@keyframes fall-rotate {
+  0% {
+    opacity: 0;
+    transform: translateY(0) rotate(0deg) scale(1);
+    top: var(--start-top, -100px);
+  }
+  5% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(calc(100vh + 100px)) rotate(720deg) scale(0.7);
+    top: var(--end-top, calc(100vh + 200px));
+  }
+}
+
+/* Анимация с боковым движением */
+@keyframes fall-sway {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(0deg);
+    top: -50px;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(20px, 50vh) rotate(180deg);
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-20px, 100vh) rotate(360deg);
+    top: calc(100vh + 50px);
+  }
+}
+
+/* Анимация мерцания при падении */
+@keyframes fall-twinkle {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.5);
+    top: -30px;
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(20vh) scale(1.2);
+  }
+  30% {
+    opacity: 0.6;
+    transform: translateY(40vh) scale(0.9);
+  }
+  45% {
+    opacity: 1;
+    transform: translateY(60vh) scale(1.1);
+  }
+  60% {
+    opacity: 0.7;
+    transform: translateY(80vh) scale(0.8);
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100vh) scale(0.5);
+    top: calc(100vh + 30px);
+  }
+}
+
+/* Метеоры (быстрые падающие звезды с хвостом) */
+.meteor {
+  position: absolute;
+  top: -50px;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%,
+    #FFD700 20%,
+    #FFF 40%,
+    #FFD700 60%,
+    transparent 100%
+  );
+  transform: rotate(-45deg);
+  transform-origin: left center;
+  filter: blur(1px);
+  opacity: 0;
+}
+
+@keyframes meteor-fall {
+  0% {
+    opacity: 0;
+    transform: rotate(-45deg) translateX(0) scaleX(0.1);
+  }
+  10% {
+    opacity: 1;
+    transform: rotate(-45deg) translateX(0) scaleX(1);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(-45deg) translateX(500px) scaleX(0.1);
+  }
+}
+
+/* Разные типы падения для разных звезд */
+.star:nth-child(3n) {
+  animation-name: fall-sway;
+  animation-timing-function: ease-in-out;
+}
+
+.star:nth-child(5n) {
+  animation-name: fall-twinkle;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.star:nth-child(7n) {
+  animation-duration: calc(var(--duration, 15s) * 0.7);
+}
+
+.big-star:nth-child(odd) {
+  animation-name: fall-rotate;
+}
+
+/* Медленное падение для некоторых звезд */
+.star:nth-child(10n) {
+  animation-duration: 30s;
+  animation-timing-function: linear;
+}
+
+/* Быстрое падение для некоторых звезд */
+.star:nth-child(13n) {
+  animation-duration: 8s;
+  animation-timing-function: ease-out;
+}
