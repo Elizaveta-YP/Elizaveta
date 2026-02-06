@@ -214,8 +214,47 @@
 }
 
 @media (max-width: 480px) {
+
   .laptop-image {
     width: 120px;
     top: 15px;
   }
+
+  .accordionTitle {
+    font-size: calc(var(--size-title) / 2.8);
+  }
+
+  .accordionIcon {
+    font-size: 16px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .accordionHeader {
+    max-height: 40px;
+      
+    background: linear-gradient(90deg, 
+      rgba(255, 182, 193, 0.8),   
+      rgba(255, 218, 185, 0.8),    
+      rgba(255, 255, 204, 0.8),    
+      rgba(204, 255, 204, 0.8),    
+      rgba(204, 255, 255, 0.8),   
+      rgba(204, 204, 255, 0.8),   
+      rgba(230, 204, 255, 0.8),    
+      rgba(255, 182, 193, 0.8)     
+    );
+    animation: rainbowMove 10s linear infinite;
+    background-size: 400% 100%;
+  }
+
+   @keyframes rainbowMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }}
 }

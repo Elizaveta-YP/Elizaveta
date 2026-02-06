@@ -181,17 +181,19 @@
     text-align: center;
   }}
 
-  @media (max-width: 480px) {
+@media (max-width: 480px) {
+  
   .titleContacts {
-    font-size: calc(var(--size-title) * 0.7);
-    margin: 25px 15px;
+    font-size: calc(var(--size-title) / 2);
     text-align: center;
+    padding: 12px;
+    margin: 10px 10px; 
   }
   
   .textContacts {
     margin-inline: 20px;
     margin-block: 20px;
-    font-size: calc(var(--size-text) * 0.9);
+    font-size: calc(var(--size-text) / 2);
     text-align: center;
     line-height: 1.5;
   }
@@ -201,8 +203,7 @@
     flex-direction: column;
     align-items: center;
     margin-inline: 15px;
-    gap: 25px;
-    grid-template-columns: 1fr; 
+    gap: 15px;
   }
   
   .section > * {
@@ -212,72 +213,91 @@
     text-align: center;
     width: 100%;
     max-width: 280px;
-    margin: 0 auto;
+    gap: 8px; 
+    margin-bottom: 10px;
   }
   
   .smallHeadlinesContact {
-    font-size: calc(var(--size-subtitle) * 0.85);
-    text-align: center;
-    margin-bottom: 8px;
-    color: #58b9b0;
-    width: 100%;
-    order: 1;
+    display: none;
+
   }
   
   .dataContacts {
     font-size: calc(var(--size-link) * 0.9);
     text-align: center;
-    display: block;
-    order: 2;
-    padding: 12px 15px;
-    border-radius: 10px;
-    background-color: rgba(88, 185, 176, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 12px;
+    background-color: rgba(88, 185, 176, 0.15);
     transition: all 0.3s ease;
-    margin-bottom: 0;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
     border: 2px solid transparent;
-    word-break: break-word; 
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 0;
+    gap: 8px;
+  }
+  
+  .email::before {
+    content: "Email: ";
+    font-size: var( --small-subtitle);
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .telegram::before {
+    content: "Telegram: ";
+    font-size: var( --small-subtitle);
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .city::before {
+    content: "Город: ";
+     font-size: var( --small-subtitle);
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .dataContacts:hover,
+  .dataContacts:active {
+    background-color: rgba(88, 185, 176, 0.25);
+    border-color: #58b9b0;
+    transform: translateY(-2px);
+    padding: 10px 15px; 
+    margin: 0;
+  }
+  
+  .city {
+    cursor: pointer;
+    border: none;
+    background-color: rgba(88, 185, 176, 0.15);
   }
   
   .copyLink {
     text-decoration: none;
     color: #333;
     font-weight: 500;
-    display: block;
-    padding: 12px 15px;
-    cursor: pointer;
-    font-size: 18px;
     width: 100%;
-  }
-  
-  .city {
-    cursor: pointer;
-    font-size: calc(var(--size-link) * 0.9);
-    padding: 12px 15px;
-    background-color: rgba(88, 185, 176, 0.1);
-    border: 2px solid transparent;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .copyLink:active,
-  .city:active {
-    transform: scale(0.98);
-    background-color: rgba(88, 185, 176, 0.3);
   }
   
   .copyNotification {
     position: fixed;
-    top: 15px;
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(88, 185, 176, 0.95);
     color: white;
-    padding: 12px 20px;
+    padding: 8px 15px;
     border-radius: 10px;
     z-index: 1000;
     font-weight: 500;
@@ -286,7 +306,7 @@
     text-align: center;
     font-size: 14px;
     width: 90%;
-    max-width: 280px;
+    max-width: 280px; 
   }
   
   @keyframes fadeInOut {
@@ -353,7 +373,12 @@
   .mapCloseBtn:active {
     background-color: #4aa89f;
     transform: scale(1.1);
-  } 
+  }
+  
+  div[style*="min-height"] {
+    min-height: auto !important;
+    padding-bottom: 10px !important;
+  }
 }
 
 @media (min-width: 361px) and (max-width: 429px) {

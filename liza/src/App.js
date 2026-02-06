@@ -169,7 +169,7 @@ function App() {
               >
                 <h2 className="accordionTitle">Обо мне</h2>
                 <span className="accordionIcon">
-                  {expandedSections.about ? '−' : '+'}
+                  {expandedSections.about ? '↓' : '↓'}
                 </span>
               </button>
               <div className="accordionContent">
@@ -186,7 +186,7 @@ function App() {
               >
                 <h2 className="accordionTitle">Ключевые навыки</h2>
                 <span className="accordionIcon">
-                  {expandedSections.skills ? '−' : '+'}
+                  {expandedSections.skills ? '↓' : '↓'}
                 </span>
               </button>
               <div className="accordionContent">
@@ -203,7 +203,7 @@ function App() {
               >
                 <h2 className="accordionTitle">Проекты</h2>
                 <span className="accordionIcon">
-                  {expandedSections.project ? '−' : '+'}
+                  {expandedSections.project ? '↓' : '↓'}
                 </span>
               </button>
               <div className="accordionContent">
@@ -220,7 +220,7 @@ function App() {
               >
                 <h2 className="accordionTitle">Контакты</h2>
                 <span className="accordionIcon">
-                  {expandedSections.contact ? '−' : '+'}
+                  {expandedSections.contact ? '↓' : '↓'}
                 </span>
               </button>
               <div className="accordionContent">

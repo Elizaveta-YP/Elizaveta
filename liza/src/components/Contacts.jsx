@@ -82,7 +82,7 @@ const Contacts = () => {
                         @ElizavetaCheshejko
                     </a>
                     
-                    <h4 className='smallHeadlinesContact'>Местоположение</h4>
+                    <h4 className='smallHeadlinesContact'>Город</h4>
                     <button 
                         className='dataContacts city'
                         onClick={() => setShowMap(true)}

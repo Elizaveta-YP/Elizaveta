@@ -234,7 +234,7 @@
   }
 
   .portfolio h3 {
-    font-size: calc(var(--size-title) * 0.8);
+    font-size: calc(var(--size-title) / 2);
     margin-bottom: 15px;
   }
 
@@ -381,4 +381,19 @@
     transform: translateY(-50%) scale(0.9);
     background: rgba(88, 185, 176, 1) !important;
   }
+
+   .projectTitle {
+    font-size: calc(var(--size-subtitle) / 2);
+  }
+
+.projectContent p,
+  .blockPracticalSkills,
+  .practicalSkills {
+    font-size: calc(var(--size-text) / 2);
+  }
+
+  .cardButtons {
+    font-size: calc(var(--size-button) / 1.6);
+  }
+  
 }

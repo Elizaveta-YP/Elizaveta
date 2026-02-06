@@ -308,6 +308,23 @@
   }
 
   .smallHeadlines {
-    font-size: 16px;
+    font-size: calc(var(--subtitle) / 1.5);
   }
+
+  .titleAboutMe {
+    font-size: calc(var(--size-title) / 2);
+    margin-block: 7px;
+  }
+
+  .about-me-container p {
+  font-size: calc(var(--size-text) / 2);
+}
+
+.hobbiesContainer {
+  padding: 0;
+}
+
+.sectionButtons {
+  font-size: calc(var(--size-button) / 1.5);
+}
 }
