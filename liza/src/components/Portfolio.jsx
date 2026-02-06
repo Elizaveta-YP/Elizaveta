@@ -20,18 +20,6 @@ import website from '../images/website.jpg';
 import Confetti from '../components/Confetti';
 
 const Portfolio = () => {
-    const [isPopupOpen, setIsPopupOpen] = useState(false);
-    const [selectedProject, setSelectedProject] = useState(null);
-
-    const handleOpenPopup = (project) => {
-        setSelectedProject(project);
-        setIsPopupOpen(true);
-    }
-
-    const handleClosePopup = () => {
-        setIsPopupOpen(false);
-        setSelectedProject(null);
-    }
 
     const projects = [
         { 

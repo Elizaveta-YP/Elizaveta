@@ -58,10 +58,6 @@ const Skills = () => {
         }
     };
 
-    const handleSkillClick = (skill) => {
-        setSelectedSkill(skill);
-    };
-
     const currentTab = skillsData[activeTab];
 
     return (

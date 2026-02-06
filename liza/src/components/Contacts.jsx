@@ -49,7 +49,7 @@ const Contacts = () => {
                 <div className='section'>
                     <h4 className='smallHeadlinesContact'>Email</h4>
                     <a 
-                        href="#" 
+                        href="/contact" 
                         className='dataContacts email copyLink'
                         onClick={handleEmailClick}
                         title="Нажмите, чтобы скопировать email"
@@ -59,7 +59,7 @@ const Contacts = () => {
                     
                     <h4 className='smallHeadlinesContact'>Telegram</h4>
                     <a 
-                        href="#" 
+                        href="/contact" 
                         className='dataContacts telegram copyLink'
                         onClick={handleTelegramClick}
                         title="Нажмите, чтобы скопировать Telegram"
