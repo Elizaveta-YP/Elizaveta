@@ -168,7 +168,6 @@
     font-size: calc(var(--size-subtitle) / 2.8);
     white-space: nowrap;
     flex-shrink: 0;
-
     border-radius: 20px;
     margin: 2px 0;
     width: 60%;
@@ -185,7 +184,7 @@
     width: 100%;
     box-sizing: border-box;
     max-height: 17px;
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .navLink:hover,
